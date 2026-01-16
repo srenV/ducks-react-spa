@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-export const Hero = ({ lightmode, amount }) => {
+export const Hero = ({ lightmode, amount, isMobile }) => {
   return (
     <AnimatePresence>
       <section
@@ -16,7 +16,7 @@ export const Hero = ({ lightmode, amount }) => {
         <motion.div
           className="bg-transparent my-10  flex flex-col justify-center items-center gap-1 w-full px-10"
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
-          viewport={{ amount: amount }}
+          viewport={{ amount: amount, once: isMobile }}
           initial={{ translateX: -200, scale: 0.8, opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -28,7 +28,7 @@ export const Hero = ({ lightmode, amount }) => {
         <motion.div
           className="bg-purple-400 my-10"
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
-          viewport={{ amount: amount }}
+          viewport={{ amount: amount, once: isMobile }}
           initial={{ translateX: 300, scale: 0.8, opacity: 0 }}
           transition={{ duration: 0.5 }}
         ></motion.div>

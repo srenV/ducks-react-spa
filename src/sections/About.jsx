@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-export const About = ({ lightmode, amount }) => {
+export const About = ({ lightmode, amount, isMobile }) => {
   return (
     <AnimatePresence>
       <section
@@ -16,14 +16,14 @@ export const About = ({ lightmode, amount }) => {
         <motion.div
           className="bg-purple-400 my-10"
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
-          viewport={{ amount: amount }}
+          viewport={{ amount: amount, once: isMobile }}
           initial={{ translateX: -300, scale: 0.8, opacity: 0 }}
           transition={{duration: 0.5}}
         ></motion.div>
         <motion.div
           className="bg-amber-400 my-10"
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
-          viewport={{ amount: amount }}
+          viewport={{ amount: amount, once: isMobile }}
           initial={{ translateX: 300, scale: 0.8, opacity: 0 }}
           transition={{duration: 0.5}}
         ></motion.div>

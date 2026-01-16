@@ -9,15 +9,17 @@ import { Contact } from "./sections/Contact";
 
 function App() {
   const [lightmode, setLightmode] = useState(false);
-
+  const [isMobile, setIsMobile] = useState(false)
   const [amount, setAmount] = useState(0.5);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setAmount(0);
+        setIsMobile(true)
       } else {
         setAmount(0.5);
+        setIsMobile(false)
       }
     };
     handleResize()
@@ -29,10 +31,10 @@ function App() {
     <div className={`flex flex-col  h-dvh relative overflow-x-hidden`}>
       <Navbar lightmode={lightmode} setLightmode={setLightmode} />
       <main>
-        <Hero lightmode={lightmode}  amount={amount}/>
-        <About lightmode={lightmode} amount={amount}/>
-        <Showcase lightmode={lightmode} amount={amount}/>
-        <Contact lightmode={lightmode} amount={amount}/>
+        <Hero lightmode={lightmode}  amount={amount} isMobile={isMobile}/>
+        <About lightmode={lightmode} amount={amount} isMobile={isMobile}/>
+        <Showcase lightmode={lightmode} amount={amount} isMobile={isMobile}/>
+        <Contact lightmode={lightmode} amount={amount} isMobile={isMobile}/>
       </main>
       <Footer lightmode={lightmode} />
     </div>
