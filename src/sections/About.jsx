@@ -17,7 +17,7 @@ export const About = ({ lightmode, amount, isMobile }) => {
           className="bg-purple-400 my-10"
           style={{ willChange: "transform, opacity" }}
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
-          viewport={{ amount: amount, once: isMobile }}
+          viewport={{ amount: amount }}
           initial={{ translateX: -300, scale: 0.8, opacity: 0 }}
           transition={{duration: 0.5}}
         ></motion.div>
@@ -25,7 +25,7 @@ export const About = ({ lightmode, amount, isMobile }) => {
           className="bg-amber-400 my-10"
           style={{ willChange: "transform, opacity" }}
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
-          viewport={{ amount: amount, once: isMobile }}
+          viewport={{ amount: amount}}
           initial={{ translateX: 300, scale: 0.8, opacity: 0 }}
           transition={{duration: 0.5}}
         ></motion.div>
