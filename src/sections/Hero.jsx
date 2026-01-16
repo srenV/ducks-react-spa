@@ -15,6 +15,7 @@ export const Hero = ({ lightmode, amount, isMobile }) => {
       >
         <motion.div
           className="bg-transparent my-10  flex flex-col justify-center items-center gap-1 w-full px-10"
+          style={{ willChange: "transform, opacity" }}
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
           viewport={{ amount: amount, once: isMobile }}
           initial={{ translateX: -200, scale: 0.8, opacity: 0 }}
@@ -27,6 +28,7 @@ export const Hero = ({ lightmode, amount, isMobile }) => {
         </motion.div>
         <motion.div
           className="bg-purple-400 my-10"
+          style={{ willChange: "transform, opacity" }}
           whileInView={{ translateX: 0, scale: 1, opacity: 1 }}
           viewport={{ amount: amount, once: isMobile }}
           initial={{ translateX: 300, scale: 0.8, opacity: 0 }}
