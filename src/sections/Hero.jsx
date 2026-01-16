@@ -9,7 +9,7 @@ export const Hero = ({ lightmode, amount, isMobile }) => {
         role="region"
         aria-label="Home"
         tabIndex={-1}
-        className={`h-dvh grid justify-center grid-cols-1 md:grid-cols-2 md:pt-10 md:px-10 md:gap-10 ${
+        className={`h-svh grid justify-center grid-cols-1 md:grid-cols-2 md:pt-10 md:px-10 md:gap-10 ${
           lightmode ? "bg-gray-200 text-black" : "bg-gray-600 text-white"
         }`}
       >
